@@ -64,10 +64,45 @@ Resultados para la clase fallo:
 
 Este modelo ofrece un buen equilibrio entre detectar fallos reales y evitar demasiadas falsas alarmas.
 
+## Demo en Streamlit
+
+El proyecto incluye una demo interactiva en Streamlit orientada a un tecnico de mantenimiento.
+
+La aplicacion permite:
+
+- Evaluar una maquina de forma individual.
+- Usar casos de ejemplo.
+- Calcular la probabilidad de fallo.
+- Clasificar el riesgo como bajo, medio o alto.
+- Mostrar señales operativas a revisar.
+- Añadir maquinas a una tabla temporal de seguimiento.
+- Descargar la tabla de maquinas evaluadas como CSV.
+- Consultar metricas del modelo final.
+- Ver una explicacion global mediante importancia de variables.
+
+La tabla de maquinas evaluadas funciona como una simulacion temporal dentro de la app. En una version real, esta informacion deberia guardarse en una base de datos o conectarse a sistemas internos de la empresa.
+
+## Ejecutar la app de Streamlit
+
+Desde la raiz del proyecto, activar el entorno virtual:
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+
+Para ejecutarla:
+streamlit run app_streamlit/app.py
+
+
+
+
 ## Estructura del proyecto
 
 ```text
 predictive_maintenance_project/
+│
+├── app_streamlit/
+│   ├── app.py
+│   └── requirements.txt
 │
 ├── data/
 │   └── raw/
